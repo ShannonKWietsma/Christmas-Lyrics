@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <title>About</title>  
+</head>
+<style>
+
+
+
+@font-face {
+  font-family: "ChristmasWish";
+  src: url(./fonts/ChristmasWish-monoline.otf)
+}
+@font-face {
+    font-family: "StNicholas";
+    src: url(./fonts/stnicholas.ttf)
+}
+
+html{
+        background-color: black;
+        height: 100vh;
+        padding: 0;
+        background: url("https://images.unsplash.com/photo-1513297887119-d46091b24bfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+        background-size: contain; 
+    }
+
+
+
+body{
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    left: 100px;
+    margin-right: 70px;
+    margin-left: 70px;
+    height: 475%;
+
+}
+
+html::after {
+    content: "";
+    opacity:0.6;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    min-height: 100%;
+}
+
+h1 {
+    font-family: "StNicholas";
+    text-align: center;
+    letter-spacing: .4rem;
+    font-weight: bold;
+    font-size: 150px;
+    background-image: linear-gradient(#505050, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#p1{
+    font-size: 70px;
+    text-align: center;
+    bottom: 150px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'StNicholas', sans-serif;
+    font-family: 'StNicholas', sans-serif;
+  }
+  .wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    /* left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    color: #fff;
+  }
+  #active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper ul li{
+    margin: 15px 0;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    border-radius: 50px;
+    background: #000;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  .wrapper ul li a:after{
+    font-family: "StNicholas";
+    position: absolute;
+    content: "";
+    background: #fff;
+     background: linear-gradient(#9d1616, #ffffff, );
+    /*background: linear-gradient(375deg, #9d1616, #066711);*/
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%; 
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+  }
+  .wrapper ul li a:hover:after{
+    transform: scaleY(1);
+  }
+  .wrapper ul li a:hover{
+    color: #fff;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    color: #202020;
+  }
+  .content .title{
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .content p{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  
+  @keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
+
+
+h2 {
+color: rgb(255, 255, 255);
+padding: 20px;
+margin: 20px;
+font-family: "StNicholas";
+text-shadow:px 5px 10px #000;
+
+}
+
+#piece {
+    font-family: "StNicholas";
+    font-size: 23px;
+    position: absolute;
+    top: 150px;
+    right: 600px;
+    bottom: 500px;
+    width: 800px;
+    height: fit-content;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-radius:50px; 
+    border:5px solid transparent; 
+    padding: 1rem;
+    color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        rgb(255, 255, 255), 
+        rgba(65, 65, 65, 0.815)
+      ) 1 100%;
+
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) padding-box, 
+       linear-gradient(#fff 0 0);
+  }
+
+img {
+  margin-left: auto;
+  display: block;
+  bottom: 50px;
+  height: 100%;
+  padding-right: 50px;
+  position: relative;
+}
+
+#table {
+  width: 100%;
+}
+
+#logo {
+  top: 200px;
+  right: 400px;
+  height: 40%;
+  width: 40%;
+}
+
+#logo2 {
+  top: 50px;
+  right: 100px;
+  height: 30%;
+  width: 30%;
+}
+
+
+
+</style>
+<body>
+  <table id="table">
+    <h2> Christmas Lyrics </h2>
+    <td>
+      <div id="piece">   
+     
+<h3>Goal of the project</h3>
+<p>To discover how the topic within Christmas songs changed over the years, starting from somewhere around the 1930s, and ending in the 2010s. 
+</p>
+
+<h3>Academic relevance</h3>
+  <p>At the beginning of our study we wondered about trends in the development of the Christmas theme in songs and hoped to identify correlations and discover stylistic features of the explication of the lexicon characteristic of such texts and the role of the Christmas theme in the social aspect.</p>
+  <p>Our project is able to provide insight into how Christmas is celebrated through musical representations from a mostly American point of view. ‘Mostly American’ is used, because our dataset reveals that the majority of the songs originated from the USA. Despite this mostly American point of view, it can also provide insight into how the lyrical conventions for Christmas are internationally circulated, as the celebration of Christmas is culturally dependent. One such convention is that some songs are performed over and over again, which becomes a part of the American Christmas cultural heritage.</p>
+  <p>We also learn that Christmas songs are an opportunity for pop artists to produce a song belonging to a common theme, where it could reach a wide audience. This is where a certain type of tension comes into play, Christmas songs have established lyrical conventions, and how these lyrical conventions are played with by the artists to set themselves apart from the rest. </p>
+  <p>The new Christmas tradition from a mostly American perspective is the inclusion of Christmas songs. Our project reveals that celebrating Christmas is undergoing a change, i.e., it is being commodified. With songs finding its place in pop songs every year and hitting high ranks in charts, which is especially present in Mariah Carey’s “All I Want From Christmas Is You” which has seen many releases, and is ranked first on the Billboard we worked with. </p>
+  <h3> Corpus descirption & Choices we make regarding Voyant</h3>
+  <p>For our research we created the dataset based on <i>Greatest of all time Holiday 100 songs</i> taken from Billboard  and 10 most frequent words of every included lyrics.
+    For that reason we collected, analyzed and cleaned the lyrics of all songs.
+    Our corpus is limited in size, as it consists of 100 lyrics, from which some are instrumental. For each of the lyrics, we first converted it into a txt file, and later combined those files according to their period. The dataset contains the variable ‘period’ to aid us in the sorting of the combined files, which was done because we wanted to see how the themes within the lyrics changed overtime. 
+    </p>
+  <p>Our dataset includes names of artists and tracks, country of origin, frequencies and themes of top 10 words per song and per word, year and periods of publication.
+    Further on we produced various visualizations to distinguish the tendencies of the Christmas topic lexicon’s evolution through time in various outputs.
+    For that we used the Voyant online tool.
+    </p>
+  <p>The size of the corpus in Voyant consists of 9 documents with 19,922 total words (word tokens) and 1,804 unique word forms (word types).
+    In Voyant, we used several visualizations (Wordcloud, Links, Trends, StreamGraph, MicroSearch).
+    Wordcloud served the purpose of a visual representation of the words in the corpus per period, where the size is indicative of the frequency.
+    Links served the purpose of providing a network graph, which is indicative of the higher frequency terms in proximity to one another.
+    Trends was used because it shows a line graph of the relative frequencies in the entire corpus, sectioned per time period.
+    StreamGraph was used because of its ability to depict how the frequency of certain words change in a corpus.
+    MicroSearch was used because it shows where in the entire corpus certain search terms occurs.
+    </p>
+    <h3>Conclusion</h3>
+      <p>Before reading the conclusion, please read the presentation.
+        <a href = "https://docs.google.com/presentation/d/1jLNr8f58ydQy0csQv2qGfiQi_nqGXJkxRmImc9cx7ho/edit?usp=sharing">Link to our presentation</a>  
+        Our preliminary analysis has led us to some general conclusions, which, however, cannot be definitive, but only open up possibilities for more in-depth research
+        While the word 'Christmas' is present everywhere in the corpus, it mysteriously disappeared in the 1930's.
+        We suspect this is because there are only two entries in this list, which after further inspection turned out to be the same song, performed by two different artists.
+        </p>
+  <p>As mentioned before, our dataset consists of the 100 greatest holiday songs, with songs originating from the 1930s to the 2010s. This  Billboard list was polled in order to be created, which results in our dataset not being representative of the time period between the 1930s and the 2010s, as it only includes those songs which have been voted on. However, this raised the interesting question of how the social perception of Christmas has changed over time. Our dataset fits the basic perception  that mythology/celebratory is the most dominant theme, which is most often a direct reference to the word ‘christmas’. 
+  </p>
+  <p>The five most popular songs are from the 1990s, 1950s, 1950s, 1940s, and the 2010s. Taking together the first most frequent words, we can describe it as miscellaneous, celebratory, and sentimental. </p>
+  <p>Songs from the 1950s take second place in the top 100, probably due to the rise of music genres in the Anglo-American countries and the rise of rock, country and electronic music in the second half of the 20th century.
+    Classical music no longer dominated, and the blossoming of artistic genres allowed Christmas songs from this period to incorporate more musical elements and become classics praised by future generations.
+    </p>
+  <p>As the economy recovered after the war, many of the themes of Christmas songs in the 1960s expressed the anticipation of the coming Christmas.
+    For example, 'Christmas is here', 'Baby please come home' and so on.
+    The year 1960 also saw the first appearance of the high-frequency word 'baby'.
+    For decades afterwards, Christmas songs about love continued to exist, with "baby" appearing frequently as a high-frequency word. Whereas in the past Christmas songs seemed to be more focused on describing general events, later ones were targeted, love-letter or conversational in nature, sung only to one person.
+    This also coincides with the increase in love song themes.
+    </p>
+  <p>As the years progressed, high frequency words in the lyrics would be inherited in the next decade. For example, "santa", which appeared frequently in the 1930s, and "claus", which also appeared in the 1940s, faded away in the 1950s.
+    "Santa", "Claus" and "reindeer" disappear as classic words associated with religious lore are replaced by words disassociated from these words. 
+    The word 'town', which was often found in lyrics in the past (mostly localized to the 1930), is disappearing and being replaced by 'home', which we categorized as traditions, however it does have sentimental value. 
+    </p>
+  <p>Although this is a study of the lyrics of the Top-100 Christmas songs, which has some limitations, such as the fact that the most frequent word must be 'Christmas', it does reveal a number of general artistic and social conventions, such as the increase in love-themed songs, the reasons for which are worth investigating.
+    We recommend that for future research on christmas lyrics, it is worth considering applying lemmatization and n-grams to the corpus.
+    The main advantage of lemmatization is that it enables researchers to take into consideration the context of the word to determine the intended meaning.
+    If the desired outcome of a further research project is to determine the likelihood of a category for christmas lyrics, considering n-grams is a suitable approach.  
+    Additionally, it will be worth considering to look at the more atypical words surrounding Christmas songs, as this could gain insight into what is considered abnormal during Christmas. We already found such an instance, ‘shawty’. Furthermore, during our investigation we frequently encountered interjections, which seems to have an influence on the emotional development of christmas lyrics. 
+    </p>
+  <p></p>
+
+<h3>Contributor roles</h3>
+  <h4> Person - what they contributed</h4>
+        <p> <b>Ece Demirtaş</b> - Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Resources, Validation, Visualization. </p>
+        <p> <b>Michael Ianovitskii</b> - Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Resources, Validation, Visualization, Writing - review & editing.</p>
+        <p> <b>Willem Noordink</b> - Data curation, Investigation, Resources, Validation, Visualization.</p>
+        <p> <b>Ziyi Wang</b> - Conceptualization, Data curation, Formal analysis, Investigation, Resources, Validation, Visualization, Writing - original draft.</p>
+        <p> <b>Shannon Wietsma</b> - Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Project administration, Resources, Supervision, Validation, Visualization, Writing - review & editing.</p>
+    </div>
+    <br>
+  </td>
+<td>
+    <img src="http://www.best-norman-rockwell-art.com/images/x1931-merry-christmas-concert-trio.jpg.pagespeed.ic.3SwzaGHz2S.webp">
+  </tr>
+
+  
+
+</table>
+
+
+
+    <input type="checkbox" id="active">
+<label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+<div class="wrapper">
+  <ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./About.html">About</a></li>
+    <li><a href="./Gallery.html">Gallery</a></li>
+</ul>
+</div>
+<div class="content">
+  <div class="title">
+</div>
+    
+</body>
+</html>
